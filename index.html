@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+
+        <!-- Title -->
+        <title>Modazon</title>
+		
+		<!-- Meta tags -->
+		<meta charset="UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<meta property="og:title" content="Modazon"/>
+		<meta property="og:description" content="Scopri le nuove promozioni della settimana!"/>
+		<meta property="og:image" content="https://modazon.github.io/home/images/logo.jpg"/>
+        
+        <!-- Icon -->
+        <link rel="icon" href="images/icon.jpg" sizes="32x32">
+
+        <!-- Animation -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+        <!-- Bootstrap -->
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.rtl.min.css" integrity="sha384-+4j30LffJ4tgIMrq9CwHvn0NjEvmuDCOfk6Rpg2xg7zgOxWWtLtozDEEVvBPgHqE" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+        
+        <!-- CSS code -->
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+
+        <!-- JS code -->
+        <script src="js/index.js" type="text/javascript"></script>
+        
+    </head>
+    <body>
+        
+        <!-- Navbar -->
+        <ul class="nav" id="navbar">
+            <li>
+                <img id="logo" src="images/logo.jpg" alt="Logo">
+            </li>
+            <li>
+                <a title="UOMO" href="#">
+                    <button id="man" onclick="man()">UOMO</button>
+                </a>
+            </li>
+            <li>
+                <a title="DONNA" href="#">
+                    <button id="woman" onclick="woman()">DONNA</button>
+                </a>
+            </li>
+            <li>
+                <a title="KIDS" href="#">
+                    <button id="kids" onclick="kids()">KIDS</button>
+                </a>
+            </li>
+            <li>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>
+                                <p>Promozioni valide</p>
+                                <p>dal 17 al 23 aprile 2023</p>
+                            </h3>
+                        </td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+
+        <!-- Endline -->
+        <script type="text/javascript">
+            for(let i = 0; i < 4; i++)
+                document.write("<br/>");
+        </script>
+
+        <table id="bodyTable">
+            <tr>
+                <td id="categories" valign="top" class="animate__animated animate__fadeInUp">
+
+                    <!-- Categories (for man) -->
+                    <a id="nameCategory1" title="ABITI" href="#">
+                        <button class="category" id="category-1" onclick="category1()">ABITI</button>
+                    </a>
+                    <a id="nameCategory2" title="ACCESSORI" href="#">
+                        <button class="category" id="category-2" onclick="category2()">ACCESSORI</button>
+                    </a>
+                    <a id="nameCategory3" title="BERMUDA" href="#">
+                        <button class="category" id="category-3" onclick="category3()">BERMUDA</button>
+                    </a>
+                    <a id="nameCategory4" title="CALZATURE" href="#">
+                        <button class="category" id="category-4" onclick="category4()">CALZATURE</button>
+                    </a>
+                    <a id="nameCategory5" title="CAMICIE" href="#">
+                        <button class="category" id="category-5" onclick="category5()">CAMICIE</button>
+                    </a>
+                    <a id="nameCategory6" title="FELPE" href="#">
+                        <button class="category" id="category-6" onclick="category6()">FELPE</button>
+                    </a>
+                    <a id="nameCategory7" title="GIACCHE" href="#">
+                        <button class="category" id="category-7" onclick="category7()">GIACCHE</button>
+                    </a>
+                    <a id="nameCategory8" title="GIUBBINI E GIACCONI" href="#">
+                        <button class="category" id="category-8" onclick="category8()">GIUBBINI E GIACCONI</button>
+                    </a>
+                    <a id="nameCategory9" title="HOMEWEAR" href="#">
+                        <button class="category" id="category-9" onclick="category9()">HOMEWEAR</button>
+                    </a>
+                    <a id="nameCategory10" title="JEANS" href="#">
+                        <button class="category" id="category-10" onclick="category10()">JEANS</button>
+                    </a>
+                    <a id="nameCategory11" title="MAGLIERIA" href="#">
+                        <button class="category" id="category-11" onclick="category11()">MAGLIERIA</button>
+                    </a>
+                    <a id="nameCategory12" title="PANTALONI" href="#">
+                        <button class="category" id="category-12" onclick="category12()">PANTALONI</button>
+                    </a>
+                    <a id="nameCategory13" title="POLO" href="#">
+                        <button class="category" id="category-13" onclick="category13()">POLO</button>
+                    </a>
+                    <a id="nameCategory14" title="T-SHIRT" href="#">
+                        <button class="category" id="category-14" onclick="category14()">T-SHIRT</button>
+                    </a>
+                    <a id="nameCategory15">
+                        <button class="category" id="category-15" onclick="category15()" disabled></button>
+                    </a>
+                    <a id="nameCategory16">
+                        <button class="category" id="category-16" onclick="category16()" disabled></button>
+                    </a>
+                    <a id="nameCategory17">
+                        <button class="category" id="category-17" onclick="category17()" disabled></button>
+                    </a>
+
+                </td>
+                <td id="articles" class="animate__animated animate__fadeInLeft">
+
+                    <!-- Articles (for man) -->
+                    <table id="cards">
+                        <tr>
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle1" src="images/uomo/abiti/articolo1.jpg" class="card-img-top" alt="article 1">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle1" class="card-title">Nome articolo</h5>
+                                        <p id="priceArticle1" class="card-text">Prezzo articolo</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle1" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle2" src="images/uomo/abiti/articolo2.jpg" class="card-img-top" alt="article 2">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle2" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle2" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle2" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle3" src="images/uomo/abiti/articolo3.jpg" class="card-img-top" alt="article 3">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle3" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle3" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle3" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle4" src="images/uomo/abiti/articolo4.jpg" class="card-img-top" alt="article 4">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle4" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle4" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle4" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle5" src="images/uomo/abiti/articolo5.jpg" class="card-img-top" alt="article 5">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle5" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle5" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle5" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle6" src="images/uomo/abiti/articolo6.jpg" class="card-img-top" alt="article 6">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle6" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle6" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle6" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle7" src="images/uomo/abiti/articolo7.jpg" class="card-img-top" alt="article 7">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle7" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle7" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle7" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle8" src="images/uomo/abiti/articolo8.jpg" class="card-img-top" alt="article 8">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle8" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle8" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle8" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle9" src="images/uomo/abiti/articolo9.jpg" class="card-img-top" alt="article 9">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle9" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle9" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle9" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle10" src="images/uomo/abiti/articolo10.jpg" class="card-img-top" alt="article 10">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle10" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle10" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle10" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle11" src="images/uomo/abiti/articolo11.jpg" class="card-img-top" alt="article 11">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle11" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle11" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle11" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle12" src="images/uomo/abiti/articolo12.jpg" class="card-img-top" alt="article 12">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle12" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle12" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle12" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle13" src="images/uomo/abiti/articolo13.jpg" class="card-img-top" alt="article 13">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle13" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle13" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle13" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle14" src="images/uomo/abiti/articolo14.jpg" class="card-img-top" alt="article 14">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle14" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle14" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle14" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle15" src="images/uomo/abiti/articolo15.jpg" class="card-img-top" alt="article 15">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle15" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle15" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle15" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle16" src="images/uomo/abiti/articolo16.jpg" class="card-img-top" alt="article 16">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle16" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle16" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle16" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle17" src="images/uomo/abiti/articolo17.jpg" class="card-img-top" alt="article 17">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle17" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle17" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle17" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle18" src="images/uomo/abiti/articolo18.jpg" class="card-img-top" alt="article 18">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle18" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle18" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle18" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle19" src="images/uomo/abiti/articolo19.jpg" class="card-img-top" alt="article 19">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle19" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle19" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle19" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle20" src="images/uomo/abiti/articolo20.jpg" class="card-img-top" alt="article 20">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle20" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle20" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle20" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle21" src="images/uomo/abiti/articolo21.jpg" class="card-img-top" alt="article 21">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle21" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle21" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle21" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle22" src="images/uomo/abiti/articolo22.jpg" class="card-img-top" alt="article 22">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle22" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle22" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle22" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle23" src="images/uomo/abiti/articolo23.jpg" class="card-img-top" alt="article 23">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle23" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle23" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle23" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle24" src="images/uomo/abiti/articolo24.jpg" class="card-img-top" alt="article 24">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle24" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle24" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle24" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle25" src="images/uomo/abiti/articolo25.jpg" class="card-img-top" alt="article 25">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle25" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle25" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle25" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle26" src="images/uomo/abiti/articolo26.jpg" class="card-img-top" alt="article 26">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle26" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle26" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle26" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle27" src="images/uomo/abiti/articolo27.jpg" class="card-img-top" alt="article 27">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle27" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle27" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle27" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle28" src="images/uomo/abiti/articolo28.jpg" class="card-img-top" alt="article 28">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle28" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle28" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle28" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle29" src="images/uomo/abiti/articolo29.jpg" class="card-img-top" alt="article 29">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle29" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle29" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle29" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+
+                            <td id="tdCards">
+                                <div class="card" style="width: 18rem;">
+                                    <img id="imageArticle30" src="images/uomo/abiti/articolo30.jpg" class="card-img-top" alt="article 30">
+                                    <div class="card-body">
+                                        <h5 id="nameArticle30" class="card-title">Articolo 1</h5>
+                                        <p id="priceArticle30" class="card-text">Breve descrizione</p>
+                                        <a href="https://www.youtube.com" title="Acquista" target="_blank" id="linkArticle30" class="btn btn-primary">Acquista</a>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+
+                </td>
+            </tr>
+        </table>
+
+        <!-- End -->
+        <table id="end">
+            <tr>
+                <td valign="middle">
+                    <h2>Non ci sono altri elementi da mostrare</h2>
+                </td>
+            </tr>
+        </table>
+        
+        <!-- Validity web site -->
+        <script type=text/javascript>
+            
+            // calculation week
+            let week;
+            let day = new Date().getDay();
+            Date.prototype.getWeek = function()
+            {
+                let datetime = new Date(this.getFullYear(), 0, 1);
+                week = Math.ceil((((this - datetime) / 86400000) + datetime.getDay() + 1) / 7);
+                return week;
+            }
+            week = (new Date()).getWeek();
+            if (day == 0 || day == 6)
+                week--;
+            
+            // ISTRUZIONI PROVVISORIE
+            console.log("Giorno della settimana: " + day);
+            console.log("Settimana dell'anno: " + week);
+            
+            // calculation year
+            let year = new Date().getFullYear();
+            
+            // exception
+            let numberWeek = 16;
+            let numberYear = 2023;
+            if (week != numberWeek || year != numberYear)
+            {
+                if (week > numberWeek)
+                {
+                    
+                    // remove elements in the body
+                    document.getElementById("bodyTable").style.display = "none";
+                    document.getElementById("end").style.display = "none";
+                    document.getElementById("navbar").style.display = "none";
+
+                    // set warning
+                    document.write("<h1 id='err' class='animate__animated animate__backInDown'></h1>");
+                    document.getElementById("err").textContent = "Promozione scaduta!";
+                    document.getElementById("err").style.color = "white";
+                    document.getElementById("err").style.verticalAlign = "bottom";
+                    document.getElementById("err").style.fontStyle = "italic";
+                    document.getElementById("err").style.textAlign = "center";
+                    document.getElementById("err").style.marginTop = "10%";
+                    
+                }
+                else
+                {
+                    
+                    // remove elements in the body
+                    document.getElementById("bodyTable").style.display = "none";
+                    document.getElementById("end").style.display = "none";
+                    document.getElementById("navbar").style.display = "none";
+
+                    // set warning
+                    document.write("<h1 id='err' class='animate__animated animate__backInDown'></h1>");
+                    document.getElementById("err").textContent = "Promozione non ancora disponibile!";
+                    document.getElementById("err").style.color = "white";
+                    document.getElementById("err").style.verticalAlign = "bottom";
+                    document.getElementById("err").style.fontStyle = "italic";
+                    document.getElementById("err").style.textAlign = "center";
+                    document.getElementById("err").style.marginTop = "10%";
+                    
+                }
+            }
+            
+        </script>
+
+    </body>
+</html>
